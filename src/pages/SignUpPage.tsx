@@ -23,7 +23,7 @@ function SignUpPage() {
                 return;
             }
 
-            const res = await axios.post('/api/user/register', { name, email, password })
+            const res = await axios.post('https://invoiceserver-2vrs.onrender.com/api/user/register', { name, email, password })
             toast.success("Registration Done");
             console.log(res);
 
