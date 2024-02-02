@@ -4,23 +4,7 @@ import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom'
 
 
-interface SignUpRequest {
-    name: string;
-    email: string;
-    password: string;
-}
 
-// Define an interface for the response structure
-interface SignUpResponse {
-    success: boolean;
-    message: string;
-    user: {
-        userId: number;
-        userName: string;
-        password: string
-        // ... other user properties
-    };
-}
 
 function SignUpPage() {
     const [name, setName] = useState<string>("");
