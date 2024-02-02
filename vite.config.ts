@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
 
     proxy: {
-      "/": {
+      "/api": {
         target: "https://invoiceserver-2vrs.onrender.com",
         changeOrigin: true,
         secure: false
