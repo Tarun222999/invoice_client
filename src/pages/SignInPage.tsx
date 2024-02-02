@@ -13,7 +13,7 @@ function SignInPage() {
         try {
             e.preventDefault();
             console.log(email, password);
-            const res = await axios.post('/api/user/login', { name, email, password })
+            const res = await axios.post('https://invoiceserver-2vrs.onrender.com/api/user/login', { name, email, password })
             console.log(res.data);
             if (res.data.success === false) {
                 toast.error("Invalid login");
