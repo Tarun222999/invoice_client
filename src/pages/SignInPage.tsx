@@ -1,23 +1,13 @@
 import axios from 'axios';
-import React, { MouseEventHandler, useState } from 'react'
+import  { MouseEventHandler, useState } from 'react'
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../components/AuthProvider';
-interface LoginResponse {
-    message: string;
-    success: boolean;
-    token: string;
-    user: {
-        email: string;
-        name: string;
-        _id: string;
-    };
-}
 
 function SignInPage() {
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
-    const { auth, setAuth } = useAuth();
+    const {  setAuth } = useAuth();
     const navigate = useNavigate();
     const handleSignIn: MouseEventHandler<HTMLButtonElement> = async (e) => {
         try {
