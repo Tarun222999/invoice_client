@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { MouseEventHandler, useState } from 'react'
+import  { MouseEventHandler, useState } from 'react'
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom'
 
