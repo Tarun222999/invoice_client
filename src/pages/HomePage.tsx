@@ -60,7 +60,7 @@ function HomePage() {
 
             };
 
-            const response = await axios.post('/api/generate-pdf', { userId, ...bill }, {
+            const response = await axios.post('https://invoiceserver-2vrs.onrender.com/api/generate-pdf', { userId, ...bill }, {
                 responseType: 'blob', // Set the response type to 'blob'
             });
 
