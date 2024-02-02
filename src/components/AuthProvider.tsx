@@ -1,4 +1,4 @@
-import React, { createContext, PropsWithChildren, useState, useEffect, useContext, Dispatch, SetStateAction } from "react";
+import  { createContext, PropsWithChildren, useState, useEffect, useContext, Dispatch, SetStateAction } from "react";
 import axios from "axios";
 import { User } from "../types/User";
 
@@ -27,7 +27,7 @@ const AuthProvider = ({ children }: PropsWithChildren) => {
             const parseData = JSON.parse(data);
 
             console.log("local storage data", parseData);
-            setAuth((prevAuth) => ({
+            setAuth(() => ({
 
                 user: parseData.user,
                 token: parseData.token,
